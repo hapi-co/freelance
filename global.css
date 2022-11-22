@@ -1,0 +1,21 @@
+/* CUSTOM STYLES */
+
+  /* Set image aspect ratios */
+  /* Append these classes to any container that an image sits in, to set the ratio */
+  .aspect1-1 {
+    aspect-ratio: 1 / 1;
+  }
+  .aspect9-7 {
+    aspect-ratio: 9 / 7;
+  }
+  .aspect16-9 {
+    aspect-ratio: 16 / 9;
+  }
+  .aspect2-1 {
+    aspect-ratio: 2 / 1;
+  }
+
+  /*Reference Splide JS for slider component https://splidejs.com/*/
+  .splide__track {
+    overflow: visible;
+  }
