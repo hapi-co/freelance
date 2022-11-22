@@ -7,13 +7,12 @@
   var navScrollBlockHide = document.getElementById("navScrollBlockHide");
   var scrollBlock = document.getElementById("scrollBlock");
   var navFixedMenu = document.getElementById("navFixedMenu");
-  // const navBoxMobile = document.getElementById("navBoxMobile");
   const menuIconLogo = document.getElementById("menuIconLogo");
   const menuCloseBtn = document.getElementById("menuCloseBtn");
   const fixedMenuNavIconMob = document.getElementById("fixedMenuNavIconMob");
   const fixedMenuCloseBtn = document.getElementById("fixedMenuCloseBtn");
   const navbarMobile = document.getElementById("navbarMobile");
-  const navMobContact = document.getElementById("navMobContact");
+  const navMobContact01 = document.getElementById("navMobContact01");
   const navMobContact02 = document.getElementById("navMobContact02");
   const navbar = document.getElementById("navbar");
 
@@ -65,7 +64,7 @@
 
   // Close nav and scroll to anchor when contact button clicked in menu
   function navMobContactFunc () {
-    console.log("contact02 pressed nav close button hidden");
+    console.log("contact pressed / nav + close button hidden");
     document.body.classList.remove("disableScroll");
     document.body.classList.add("enableScroll");
     fixedMenuCloseBtn.classList.remove("showFlex");
@@ -74,17 +73,15 @@
     navbarMobile.classList.add("navMobZBottom");
     navbar.classList.remove("hide");
     navbar.classList.add("showFlex");
-    console.log('Called js function');
+    // console.log('Called js function');
   };
-
+  navMobContact01.onclick = function() {
+    navMobContactFunc ();
+    console.log('Called contact function menu 01');
+  };
   navMobContact02.onclick = function() {
     navMobContactFunc ();
-    console.log('Called function menu 01');
-  };
-
-  navMobContact.onclick = function() {
-    navMobContactFunc ();
-    console.log('Called function menu 02');
+    console.log('Called contact function menu 02');
   };
 
   // Show scrollStopperDiv
@@ -140,3 +137,22 @@
     scrollBlock.classList.add("showFlex");
     scrollBlock.classList.remove("hide");
   });
+
+  // Nav InteractionObserver
+  const navbarMobileObserve = document.getElementById("navbarMobile");
+  const heroVideo = document.getElementById("heroVideoWrap");
+
+  const observer = new IntersectionObserver(entries => {
+    console.log(entries)
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navbarMobileObserve.style.display = "flex";
+        // heroVideo.style.backgroundColor = "white";
+      } else {
+        // heroVideo.style.backgroundColor = "transparent";
+        navbarMobileObserve.style.display = "none";
+      }
+    })
+  })
+
+  observer.observe(document.getElementById("main"))
