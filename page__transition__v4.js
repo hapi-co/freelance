@@ -1,17 +1,17 @@
   // console.clear();
 
-  // Set page delay
+  // Set page delay to allow transition to play
   $('.img__box').click(function(e) {
     e.preventDefault();
-    setTimeout(function(url) { window.location = url }, 750, this.href);
+    setTimeout(function(url) { window.location = url }, 500, this.href);
   });
 
   var root  = document.documentElement;
   var body  = document.body;
   var pages = document.querySelectorAll(".thumbfullscreen");
-  // console.log(pages);
-  // var tiles = document.querySelectorAll(".img__box");
   var tiles = document.querySelectorAll(".img__work");
+  // Note: there needs to be the SAME amount of pages and tiles, else the script will not run
+  // console.log(pages);
   // console.log(tiles);
 
   for (var i = 0; i < tiles.length; i++) {
@@ -23,11 +23,12 @@
 
     tile.addEventListener("click", function() {
       animateHero(tile, page);
-      console.log("tile clicked");
+      // console.log("tile clicked");
     });
 
   }
 
+  // Animate the thumbnail into a full-screen hero banner
   function animateHero(fromHero, toHero) {
 
     var clone = fromHero.cloneNode(true);
@@ -60,6 +61,7 @@
     }
   }
 
+  // Find position of element and calc where it should animate from
   function calculatePosition(element) {
 
     var rect = element.getBoundingClientRect();
