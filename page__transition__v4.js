@@ -1,5 +1,3 @@
-  console.clear();
-
   var root  = document.documentElement;
   var body  = document.body;
   var pages = document.querySelectorAll(".thumbfullscreen");
