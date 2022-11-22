@@ -1,5 +1,16 @@
 /* CUSTOM STYLES */
 
+  /* Page transition container */
+	.transition__component {
+		visibility: hidden;
+    display: block;
+  }
+
+  /* Force video mask to use GPU instead of CPU*/
+  .sticky__circle__element {
+  	-webkit-transform: translateZ(0);
+  }
+
   /* Set image aspect ratios */
   /* Append these classes to any container that an image sits in, to set the ratio */
   .aspect1-1 {
@@ -14,8 +25,28 @@
   .aspect2-1 {
     aspect-ratio: 2 / 1;
   }
+  /*
+  .img__work {
+    aspect-ratio: 1 / 1;
+    min-height: auto;
+  } */
+  /*
+  .thumbnail {
+  pointer-events: auto;
+}
+*/
 
-  /*Reference Splide JS for slider component https://splidejs.com/*/
+  /* Reference Splide JS for slider component https://splidejs.com/*/
   .splide__track {
     overflow: visible;
+  }
+
+  /* Get rid of Webflow bullshit */
+  .w-nav-overlay {
+  	display: none !important;
+  }
+
+  /* Disables 'bounce' behaviour when the end of the page is reached */
+  body {
+   overscroll-behavior-y: none;
   }
