@@ -1,3 +1,11 @@
+  // console.clear();
+
+  // Set page delay
+  $('.img__box').click(function(e) {
+    e.preventDefault();
+    setTimeout(function(url) { window.location = url }, 750, this.href);
+  });
+
   var root  = document.documentElement;
   var body  = document.body;
   var pages = document.querySelectorAll(".thumbfullscreen");
