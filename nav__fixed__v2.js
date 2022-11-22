@@ -143,7 +143,7 @@
   const heroVideo = document.getElementById("heroVideoWrap");
 
   const observer = new IntersectionObserver(entries => {
-    console.log(entries)
+    // console.log(entries)
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navbarMobileObserve.style.display = "flex";
