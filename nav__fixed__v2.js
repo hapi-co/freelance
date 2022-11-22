@@ -64,7 +64,7 @@
 
   // Close nav and scroll to anchor when contact button clicked in menu
   function navMobContactFunc () {
-    console.log("contact pressed / nav + close button hidden");
+    // console.log("contact pressed / nav + close button hidden");
     document.body.classList.remove("disableScroll");
     document.body.classList.add("enableScroll");
     fixedMenuCloseBtn.classList.remove("showFlex");
@@ -77,11 +77,11 @@
   };
   navMobContact01.onclick = function() {
     navMobContactFunc ();
-    console.log('Called contact function menu 01');
+    // console.log('Called contact function menu 01');
   };
   navMobContact02.onclick = function() {
     navMobContactFunc ();
-    console.log('Called contact function menu 02');
+    // console.log('Called contact function menu 02');
   };
 
   // Show scrollStopperDiv
@@ -97,11 +97,11 @@
   // Hide scrollStopperDiv
   navScrollBlockShow.onmouseout = function() {
     hideScrollBlockFunc ();
-    console.log('Hide scrollStopperDiv');
+    // console.log('Hide scrollStopperDiv');
   };
   navScrollBlockHide.onmouseover = function() {
     hideScrollBlockFunc ();
-    console.log('Hide scrollStopperDiv');
+    // console.log('Hide scrollStopperDiv');
   };
 // Call the function
   function hideScrollBlockFunc () {
