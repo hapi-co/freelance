@@ -140,7 +140,6 @@
 
   // Nav InteractionObserver - Main
   const navbarMobileObserve = document.getElementById("navbarMobile");
-  const heroVideo = document.getElementById("heroVideoWrap");
 
   const observer = new IntersectionObserver(entries => {
     // console.log(entries)
@@ -148,15 +147,12 @@
       if (entry.isIntersecting) {
         navbarMobileObserve.style.display = "flex";
         console.log("main intersecting");
-        // heroVideo.style.backgroundColor = "white";
       } else {
-        // heroVideo.style.backgroundColor = "transparent";
         navbarMobileObserve.style.display = "none";
         console.log("main NOT intersecting");
       }
     })
   })
-
   observer.observe(document.getElementById("main"));
 
   // Nav InteractionObserver - Hero
@@ -175,5 +171,4 @@
       }
     })
   })
-
   observerHero.observe(document.getElementById("hero"));
