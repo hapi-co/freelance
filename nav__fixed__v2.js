@@ -26,6 +26,12 @@
     navFixed.classList.remove("navFixedAnimOut");
   };
 
+  // Disable Smooth Scroll, to ensure the footer instantly snaps when contact is clicked in the nav
+  function disableSmoothScroll() {
+    document.body.setAttribute("data-scroll-time", "0");
+  }
+  disableSmoothScroll ();
+
   // Change position of mobile nav on click from absolute to fixed
   menuIconLogo.onclick = function() {
     // console.log("mobile nav logo tapped");
