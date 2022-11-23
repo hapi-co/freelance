@@ -1,5 +1,26 @@
 /* ------------------------ GLOBAL STYLES ------------------------ */
 
+  /* Wizardry - Scalable Fonts */
+   @media only screen and (min-width: 1920px) {
+     body {font-size: 16px;}
+   }
+   @media only screen and (min-width: 991px) {
+     .nav__link {font-size: 16px;}
+   }
+
+   /* Custom Cursor */
+   /* Show on Desktop */
+   #customCursor {
+     display: flex;
+   }
+
+   /* Hide on Tablet > */
+   @media(max-width:991px){
+     #customCursor {
+        display: none;
+     }
+   }
+
   /* Page transition container */
 	.transition__component {
 		visibility: hidden;
