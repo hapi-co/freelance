@@ -56,8 +56,8 @@
     document.body.classList.add("enableScroll");
     fixedMenuCloseBtn.classList.remove("showFlex");
     fixedMenuCloseBtn.classList.add("hide");
-    navbarMobile.classList.remove("navMobZTop");
-    navbarMobile.classList.add("navMobZBottom");
+    // navbarMobile.classList.remove("navMobZTop");
+    // navbarMobile.classList.add("navMobZBottom");
     navbar.classList.remove("hide");
     navbar.classList.add("showFlex");
   };
@@ -138,7 +138,7 @@
     scrollBlock.classList.remove("hide");
   });
 
-  // Nav InteractionObserver
+  // Nav InteractionObserver - Main
   const navbarMobileObserve = document.getElementById("navbarMobile");
   const heroVideo = document.getElementById("heroVideoWrap");
 
@@ -147,12 +147,33 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         navbarMobileObserve.style.display = "flex";
+        console.log("main intersecting");
         // heroVideo.style.backgroundColor = "white";
       } else {
         // heroVideo.style.backgroundColor = "transparent";
         navbarMobileObserve.style.display = "none";
+        console.log("main NOT intersecting");
       }
     })
   })
 
-  observer.observe(document.getElementById("main"))
+  observer.observe(document.getElementById("main"));
+
+  // Nav InteractionObserver - Hero
+  const navbarMobileObserveHero = document.getElementById("navbarMobile");
+
+  const observerHero = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navbarMobileObserveHero.style.display = "none";
+        navbarMobileObserveHero.classList.remove("navMobZTop");
+        console.log("hero intersecting");
+      } else {
+        navbarMobileObserveHero.style.display = "flex";
+        navbarMobileObserveHero.classList.add("navMobZTop");
+        console.log("hero NOT intersecting");
+      }
+    })
+  })
+
+  observerHero.observe(document.getElementById("hero"));
