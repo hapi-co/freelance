@@ -1,4 +1,4 @@
-/* CUSTOM STYLES */
+/* ------------------------ GLOBAL STYLES ------------------------ */
 
   /* Page transition container */
 	.transition__component {
@@ -25,16 +25,6 @@
   .aspect2-1 {
     aspect-ratio: 2 / 1;
   }
-  /*
-  .img__work {
-    aspect-ratio: 1 / 1;
-    min-height: auto;
-  } */
-  /*
-  .thumbnail {
-  pointer-events: auto;
-}
-*/
 
   /* Reference Splide JS for slider component https://splidejs.com/*/
   .splide__track {
@@ -50,3 +40,123 @@
   body {
    overscroll-behavior-y: none;
   }
+
+/* ------------------------ CUSTOM NAV COMPONENT ------------------------ */
+
+#navFixed {
+  margin-top: -72px;
+}
+
+.navFixedInitial {
+  margin-top: -72px;
+  opacity: 0%;
+}
+
+.navbar__mobile {
+	display: none;
+}
+
+.w-nav-overlay {
+	display: none !important;
+}
+
+.navFixedAnimOut {
+  animation-name: navFixedOut;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  /* animation-delay: 2s; */
+}
+
+.navFixedAnimIn {
+  animation-name: navFixedIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  /* animation-delay: 2s; */
+}
+
+.navLogoAnimOut {
+  animation-name: navLogoOut;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+.navLogoAnimIn {
+  animation-name: navLogoIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+.navMobZTop {
+  z-index: 9999;
+}
+
+.navMobZBottom {
+  z-index: 99;
+}
+
+.hide {
+  display: none;
+}
+
+.showFlex {
+  display: flex;
+}
+
+.mobileNavAbsolute {
+  position: absolute;
+}
+
+.mobileNavFixed {
+  position: fixed;
+}
+
+.enableScroll {
+  height: auto;
+  overflow: visible;
+  scroll-behavior: auto !important;
+}
+
+.disableScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes navFixedOut {
+  from {
+    margin-top: 0px;
+    opacity: 100%;
+  }
+  to {
+    margin-top: -72px;
+    opacity: 0%;
+  }
+}
+
+@keyframes navFixedIn {
+  from {
+    margin-top: -72px;
+    opacity: 0%;
+  }
+  to {
+    margin-top: 0px;
+    opacity: 100%;
+  }
+}
+
+@keyframes navLogoIn {
+  from {
+    margin-right: -100px;
+  }
+  to {
+    margin-right: 50px;
+  }
+}
+
+@keyframes navLogoOut {
+  from {
+    margin-right: 50px;
+  }
+  to {
+    margin-right: -100px;
+  }
+}
