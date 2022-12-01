@@ -1,0 +1,54 @@
+/* Case Study Navbar */
+  .navbar {
+    position: fixed;
+  }
+  /* Hide on Tablet > */
+  @media(max-width:991px){
+   .navbar {
+      position: absolute;
+   }
+  }
+
+/* Fade in and out */
+
+.navCaseStudyFadeIn {
+  animation-name: caseStudyNavIn;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+.navCaseStudyFadeOut {
+  animation-name: caseStudyNavOut;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes caseStudyNavIn {
+  from {
+    opacity: 0;
+    display: none !important;
+  }
+  to {
+    opacity: 1;
+    display: flex !important;
+  }
+}
+
+@keyframes caseStudyNavOut {
+  from {
+    opacity: 1;
+    display: flex !important;
+    /* visibility: visible; */
+  }
+  to {
+    opacity: 0;
+    display: none !important;
+    /* visibility: hidden; */
+    /* background-color: red; */
+  }
+}
+
+.hideNav2 {
+  opacity: 0;
+  display: none !important;
+}
